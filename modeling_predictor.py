@@ -8,7 +8,7 @@ xgb_model=pickle.load(open('HypertuneXGB.pkl','rb'))
 
 st.set_page_config(
      page_title="Box office Predictor",
-     page_icon="🍿".
+     page_icon="🍿",
      layout="centered",
           menu_items={
          'About': 'https://www.kaggle.com/competitions/tmdb-box-office-prediction/data',
