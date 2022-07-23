@@ -13,7 +13,7 @@ st.set_page_config(
          
      }
  )
-xgb_model=pickle.load(open("HypertuneXGB.pkl","rb"))
+xgb_model=pickle.load(open('HypertuneXGB.pkl','rb'))
 @st.cache()
 
 
