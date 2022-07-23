@@ -4,7 +4,7 @@ import requests
 import base64
 import numpy as np
 
-xgb_model=pickle.load(open("HypertuneXGB.pkl","rb"))
+xgb_model=pickle.load(open('HypertuneXGB.pkl','rb'))
 
 st.set_page_config(
      page_title="Box office Predictor",
@@ -19,26 +19,6 @@ st.set_page_config(
 
 @st.cache()
 
-
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    .stApp{
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-set_background('/color-money-background-stationery-739106.png')
 
 def prediction(budget,crew_male_count,cast_male_count,cast_count,crew_count,crew_female_count,people_count_dept_editing,people_count_dept_production,
         people_count_job_producer,people_count_job_editor,people_count_job_casting,cast_female_count,people_count_dept_VisualEffects,people_count_job_ArtDirection,
