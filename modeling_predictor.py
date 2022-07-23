@@ -4,6 +4,8 @@ import requests
 import base64
 import numpy as np
 
+xgb_model=pickle.load(open('HypertuneXGB.pkl','rb'))
+
 st.set_page_config(
      page_title="Box office Predictor",
      page_icon="🍿",
@@ -13,7 +15,7 @@ st.set_page_config(
          
      }
  )
-xgb_model=pickle.load(open('HypertuneXGB.pkl','rb'))
+
 @st.cache()
 
 
